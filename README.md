@@ -1,6 +1,6 @@
 # RV32I46F5SP Demo (Vivado)
 
-RTL sources, testbench, and toolchain flow for an RV32I 5-stage pipelined core with debug and FPGA bring-up on Nexys Video.
+RTL sources, testbench, and toolchain flow for an RV32I 5-stage pipelined core with debug and FPGA bring-up on Nexys 4 DDR.
 
 ## Highlights
 
@@ -14,7 +14,7 @@ RTL sources, testbench, and toolchain flow for an RV32I 5-stage pipelined core w
 
 ```
 .
-├─ source modules/        RTL sources and include headers (.v/.vh), constraints (.xdc)
+├─ source modules/        RTL sources and include headers (.v, .sv/.vh)
 ├─ testbench/             SystemVerilog testbench
 ├─ toolchain/             Bare-metal build flow for Instruction_Memory initialization
 ├─ Vivado_Netlist/        Vivado-generated netlist output
@@ -36,7 +36,7 @@ RTL sources, testbench, and toolchain flow for an RV32I 5-stage pipelined core w
 - testbench/tb_rv32i46f5spdebug.sv
   - Behavioral testbench with debug trace prints
 - source modules/RV32I46F_5SP_Debug_XDC.xdc
-  - Nexys Video constraints
+  - Nexys 4 DDR constraints
 
 ## Build (Vivado GUI)
 
@@ -80,7 +80,7 @@ The script emits Verilog-style `data[index] = 32'hXXXXXXXX;` lines. Paste them i
 
 See `toolchain/README.md` for the full bare-metal flow and details on `build.sh`, `start.S`, and `link.ld`.
 
-## FPGA I/O (Nexys Video)
+## FPGA I/O (Nexys 4 DDR)
 
 The FPGA top exposes:
 
