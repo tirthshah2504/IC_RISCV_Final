@@ -92,3 +92,6 @@ The FPGA top exposes:
 
 - Synthesis results in `Synthesis_Results.pdf`
 - Gate-level netlists in `Vivado_Netlist/` and `Group3_Genus_Netlist.zip`
+- Simulation results in `Simulation_Results.pdf`
+
+- Repo will all Codes https://github.com/ArjunAnandMallya/ICDesign/tree/main
