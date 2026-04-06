@@ -7,7 +7,7 @@ This document explains the complete workflow to:
 
 ---
 
-## 🧰 1. Install GNU Toolchain
+## 1. Install GNU Toolchain
 
 We use the `gcc-riscv64-unknown-elf` toolchain. Even though it is a 64-bit toolchain, it supports generating **RV32I** code.
 
@@ -25,7 +25,7 @@ riscv64-unknown-elf-gcc --version
 
 ---
 
-## ▶️ 2. How to Build and Run
+## 2. How to Build and Run
 
 Make the build script executable:
 ```bash
@@ -45,7 +45,7 @@ Run:
 
 ---
 
-## 🧾 3. build.sh Explanation
+## 3. build.sh Explanation
 
 ```bash
 set -e  # stop on first error
@@ -89,7 +89,7 @@ python3 hex_to_verilog.py program.hex
 
 ---
 
-## 🐍 4. hex_to_verilog.py Explanation
+## 4. hex_to_verilog.py Explanation
 
 ```python
 #!/usr/bin/env python3
@@ -120,7 +120,7 @@ if __name__ == "__main__":
 
 ---
 
-## 🧠 5. start.S (Program Entry)
+## 5. start.S (Program Entry)
 
 ```assembly
 .section .text
@@ -139,7 +139,7 @@ _start:
 
 ---
 
-## 🧱 6. link.ld (Memory Layout)
+## 6. link.ld (Memory Layout)
 
 ```ld
 ENTRY(_start)
@@ -170,7 +170,7 @@ SECTIONS
 
 ---
 
-## 🧪 7. Example C Program
+## 7. Example C Program
 
 ```c
 int max(int a, int b) {
@@ -196,7 +196,7 @@ int main() {
 
 ---
 
-## 🔍 8. Generated Assembly (Key Sections)
+## 8. Generated Assembly (Key Sections)
 
 ### Entry Point
 ```assembly
@@ -246,7 +246,7 @@ int main() {
 
 ---
 
-## 🧠 9. Key Observations
+## 9. Key Observations
 
 * Function calls use `jal`
 * Return values stored in `a0`
@@ -262,7 +262,7 @@ int main() {
 
 ---
 
-## 🚀 11. Summary
+## 11. Summary
 
 **Flow:**
 `C code` → `GCC` → `Object files` → `Linker` → `ELF` → `Binary` → `Hex` → `Verilog`
